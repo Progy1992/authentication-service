@@ -31,7 +31,7 @@ def login():
         username = login_data['username']
         password = login_data['password']
         generated_token = login_opertion(username, password)
-        return jsonify({'generated_token': generated_token, 'message': 'User is now signed in'})
+        return jsonify({'generated_token': generated_token, 'message': 'User is now signed in'}), 200
     except Exception as e:
         logger.error(e)
         return jsonify({'message': 'login is unsuccessful'}), 400
@@ -67,7 +67,7 @@ def checkTokenValidity():
 
     except Exception as e:
         logger.error(e)
-        return jsonify({'message': 'logout is unsuccessful'}), 400
+        return jsonify({'message': 'Error checking token validity'}), 400
 
 
 def login_opertion(username, password):
@@ -108,7 +108,7 @@ def logout_operation(jwt_token):
             session_instance.commit()
             return 'Logout is successful'
         else:
-            return 'Logout is not successful'
+            return 'Session is not active'
     except Exception as e:
         logger.error(e)
         raise Exception(e)
