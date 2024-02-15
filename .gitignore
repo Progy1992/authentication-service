@@ -1,0 +1,69 @@
+# Byte-compiled / optimized Python files
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+env/
+*.env
+
+# Compiled Python files
+*.pyc
+
+# Logs
+*.log
+
+# Local development configuration
+instance/
+
+# Dependency directories
+lib/
+lib64/
+bin/
+include/
+share/
+
+# Editor/IDE-specific files
+.idea/
+.vscode/
+
+# Database files
+db.sqlite3
+
+# Environment variables file
+.env
+
+# macOS metadata
+.DS_Store
+
+# Compiled translations
+translations/
+
+# Cache and temporary files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.swp
+*.tmp
+*~
+
+# Local development configuration
+instance/
+config.py
+
+# User-specific files
+*.swp
+*.swo
+
+# Compiled distribution
+build/
+dist/
+*.egg-info/
+
+# Compiled Python modules
+__pycache__/
+*.py[cod]
+
+# Pipenv
+Pipfile
